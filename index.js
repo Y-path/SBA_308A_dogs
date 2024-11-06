@@ -1,5 +1,4 @@
 import * as Carousel from "./Carousel.js";
-import axios from "axios";
 import { TheCatAPI } from "@thatapicompany/thecatapi";
 
 const breedSelect = document.getElementById("breedSelect");
@@ -17,7 +16,7 @@ let breedsData = [];
         const response = await fetch(URL, { headers: { "x-api-key": theDogAPI } });
         breedsData = await response.json();
         document.getElementById(breedSelect);
-        console.log(breedsData);
+        // console.log(breedsData);
         breedsData.forEach(dog => {
             const option = document.createElement('option');
             option.value = dog.id; 
@@ -84,7 +83,7 @@ breedSelect.addEventListener("change", async() => {
           `https://api.thedogapi.com/v1/images/search?limit=10&breed_ids=${breedId}&api_key=${theDogAPI}`
         );
         const breedData = await response.json();
-        console.log(breedData);
+        // console.log(breedData);
         // console.log(breedId);
         // console.log(breedData[0])
         infoDump.innerHTML = "";
@@ -192,9 +191,7 @@ async function getFavourites()
         const createCarousel = Carousel.createCarouselItem(url, alt, dogId);
         Carousel.appendCarousel(createCarousel);
         Carousel.start();
-        })      
-        
-      
+        })            
     
 })
 .catch(error => console.error('Error:', error));

@@ -12,21 +12,19 @@ export function createCarouselItem(imgSrc, imgAlt, imgId) {
   const favBtn = clone.querySelector(".favourite-button");
   favBtn.addEventListener("click", () => {
     favourite(imgId);
-    
+
   });
-  
 
+  favBtn.addEventListener('click', function () {
 
-favBtn.addEventListener('click', function() {
-    
     if (favBtn.style.color === 'red') {
-        favBtn.style.color = ''; 
-         
+      favBtn.style.color = '';
+
     } else {
-        favBtn.style.color = 'red'; 
-         
+      favBtn.style.color = 'red';
+
     }
-});
+  });
 
   return clone;
 }

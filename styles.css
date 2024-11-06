@@ -7,8 +7,6 @@ body {
   background-color: #2C1320;
 }
 
-
-
 .favourite-button {
   position: absolute;
   top: 10px;
@@ -20,6 +18,7 @@ body {
   cursor: pointer;
   transition: all ease 0.2s;
 }
+
 .favourite-button:hover {
   color: red;
   width: 36px;
@@ -27,6 +26,7 @@ body {
   top: 7px;
   right: 12px;
 }
+
 .favorited {
   color: red;
 }
@@ -34,11 +34,13 @@ body {
 .carousel-inner {
   padding: 1em;
 }
+
 .card {
   margin: 0 0.5em;
   box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
   border: none;
 }
+
 .carousel-control-prev,
 .carousel-control-next {
   background-color: #FCF7F8;
@@ -48,34 +50,40 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
+
 @media (min-width: 768px) {
   .carousel-item {
     margin-right: 0;
     flex: 0 0 33.333333%;
     display: block;
   }
+
   .carousel-inner {
     display: flex;
   }
 }
+
 .card .img-wrapper {
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .card img {
   max-height: 100%;
 }
+
 @media (max-width: 767px) {
   .card .img-wrapper {
     height: 17em;
   }
 }
+
 .infoDump {
   max-width: 100%;
   align-items: center;
   font-size: 18px;
   text-align: center;
-  
+
 }
